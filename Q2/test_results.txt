@@ -1,0 +1,72 @@
+[OK] Sample dataset loaded: 30 samples
+[OK] Classes: {'negative', 'positive', 'neutral'}
+
+[OK] Data split - Train: 24, Test: 6
+
+================================================================================
+TRAINING LOGISTIC REGRESSION MODEL
+================================================================================
+
+[OK] Accuracy: 0.5000
+[OK] F1-Score (Weighted): 0.4444
+[OK] F1-Score (Macro): 0.4444
+[OK] F1-Score (Micro): 0.5000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    negative       0.00      0.00      0.00         2
+     neutral       0.50      1.00      0.67         2
+    positive       1.00      0.50      0.67         2
+
+    accuracy                           0.50         6
+   macro avg       0.50      0.50      0.44         6
+weighted avg       0.50      0.50      0.44         6
+
+
+================================================================================
+TRAINING RANDOM FOREST MODEL
+================================================================================
+
+[OK] Accuracy: 0.5000
+[OK] F1-Score (Weighted): 0.4127
+[OK] F1-Score (Macro): 0.4127
+[OK] F1-Score (Micro): 0.5000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    negative       0.00      0.00      0.00         2
+     neutral       0.40      1.00      0.57         2
+    positive       1.00      0.50      0.67         2
+
+    accuracy                           0.50         6
+   macro avg       0.47      0.50      0.41         6
+weighted avg       0.47      0.50      0.41         6
+
+
+================================================================================
+TEST PREDICTIONS
+================================================================================
+
+Text: 'This is absolutely wonderful and fantastic!'
+  LR Prediction: positive (Confidence: 0.4259)
+  RF Prediction: neutral
+
+Text: 'I hate this, it is terrible and awful'
+  LR Prediction: negative (Confidence: 0.4012)
+  RF Prediction: neutral
+
+Text: 'The product works as described'
+  LR Prediction: neutral (Confidence: 0.3617)
+  RF Prediction: neutral
+
+Text: 'Amazing quality and excellent service'
+  LR Prediction: positive (Confidence: 0.3660)
+  RF Prediction: positive
+
+Text: 'Worst purchase I have ever made'
+  LR Prediction: positive (Confidence: 0.4567)
+  RF Prediction: positive
+
+[OK] TEST COMPLETED SUCCESSFULLY
