@@ -16,31 +16,31 @@ Testing A* with Manhattan heuristic...
   [OK] Path found: True
   [OK] Path length: 19
   [OK] Nodes expanded: 84
-  [OK] Runtime: 0.548 ms
+  [OK] Runtime: 0.561 ms
 
 Testing A* with Euclidean heuristic...
   [OK] Path found: True
   [OK] Path length: 19
   [OK] Nodes expanded: 84
-  [OK] Runtime: 1.328 ms
+  [OK] Runtime: 0.884 ms
 
 Testing A* with Chebyshev heuristic...
   [OK] Path found: True
   [OK] Path length: 19
   [OK] Nodes expanded: 84
-  [OK] Runtime: 0.513 ms
+  [OK] Runtime: 0.528 ms
 
 Testing Dijkstra's algorithm...
   [OK] Path found: True
   [OK] Path length: 19
   [OK] Nodes expanded: 84
-  [OK] Runtime: 0.616 ms
+  [OK] Runtime: 0.453 ms
 
 Testing Breadth-First Search...
   [OK] Path found: True
   [OK] Path length: 19
   [OK] Nodes expanded: 84
-  [OK] Runtime: 0.802 ms
+  [OK] Runtime: 0.459 ms
 
 Visualization (A* Manhattan):
 Legend: S=Start, G=Goal, #=Obstacle, *=Path, .=Open
@@ -67,31 +67,31 @@ Testing A* with Manhattan heuristic...
   [OK] Path found: True
   [OK] Path length: 39
   [OK] Nodes expanded: 325
-  [OK] Runtime: 2.546 ms
+  [OK] Runtime: 3.447 ms
 
 Testing A* with Euclidean heuristic...
   [OK] Path found: True
   [OK] Path length: 39
   [OK] Nodes expanded: 339
-  [OK] Runtime: 3.914 ms
+  [OK] Runtime: 4.664 ms
 
 Testing A* with Chebyshev heuristic...
   [OK] Path found: True
   [OK] Path length: 39
   [OK] Nodes expanded: 341
-  [OK] Runtime: 2.145 ms
+  [OK] Runtime: 2.915 ms
 
 Testing Dijkstra's algorithm...
   [OK] Path found: True
   [OK] Path length: 39
   [OK] Nodes expanded: 361
-  [OK] Runtime: 1.959 ms
+  [OK] Runtime: 3.083 ms
 
 Testing Breadth-First Search...
   [OK] Path found: True
   [OK] Path length: 39
   [OK] Nodes expanded: 361
-  [OK] Runtime: 1.556 ms
+  [OK] Runtime: 1.607 ms
 
 Visualization (A* Manhattan):
 Legend: S=Start, G=Goal, #=Obstacle, *=Path, .=Open
@@ -128,31 +128,31 @@ Testing A* with Manhattan heuristic...
   [OK] Path found: True
   [OK] Path length: 49
   [OK] Nodes expanded: 325
-  [OK] Runtime: 1.987 ms
+  [OK] Runtime: 3.853 ms
 
 Testing A* with Euclidean heuristic...
   [OK] Path found: True
   [OK] Path length: 49
   [OK] Nodes expanded: 336
-  [OK] Runtime: 3.342 ms
+  [OK] Runtime: 4.172 ms
 
 Testing A* with Chebyshev heuristic...
   [OK] Path found: True
   [OK] Path length: 49
   [OK] Nodes expanded: 338
-  [OK] Runtime: 2.091 ms
+  [OK] Runtime: 2.113 ms
 
 Testing Dijkstra's algorithm...
   [OK] Path found: True
   [OK] Path length: 49
   [OK] Nodes expanded: 342
-  [OK] Runtime: 2.405 ms
+  [OK] Runtime: 1.853 ms
 
 Testing Breadth-First Search...
   [OK] Path found: True
   [OK] Path length: 49
   [OK] Nodes expanded: 342
-  [OK] Runtime: 1.471 ms
+  [OK] Runtime: 1.514 ms
 
 Visualization (A* Manhattan):
 Legend: S=Start, G=Goal, #=Obstacle, *=Path, .=Open
@@ -194,31 +194,31 @@ Testing A* with Manhattan heuristic...
   [OK] Path found: True
   [OK] Path length: 33
   [OK] Nodes expanded: 138
-  [OK] Runtime: 0.828 ms
+  [OK] Runtime: 0.845 ms
 
 Testing A* with Euclidean heuristic...
   [OK] Path found: True
   [OK] Path length: 33
   [OK] Nodes expanded: 141
-  [OK] Runtime: 1.392 ms
+  [OK] Runtime: 1.394 ms
 
 Testing A* with Chebyshev heuristic...
   [OK] Path found: True
   [OK] Path length: 33
   [OK] Nodes expanded: 141
-  [OK] Runtime: 0.839 ms
+  [OK] Runtime: 0.859 ms
 
 Testing Dijkstra's algorithm...
   [OK] Path found: True
   [OK] Path length: 33
   [OK] Nodes expanded: 151
-  [OK] Runtime: 0.773 ms
+  [OK] Runtime: 0.882 ms
 
 Testing Breadth-First Search...
   [OK] Path found: True
   [OK] Path length: 33
   [OK] Nodes expanded: 151
-  [OK] Runtime: 0.636 ms
+  [OK] Runtime: 1.670 ms
 
 Visualization (A* Manhattan):
 Legend: S=Start, G=Goal, #=Obstacle, *=Path, .=Open
@@ -251,45 +251,45 @@ Algorithm: A* (chebyshev)
   Total Runs: 4
   Success Rate: 100.0% (4/4)
   Average Nodes Expanded: 226.0
-  Average Runtime: 1.397 ms
+  Average Runtime: 1.604 ms
   Average Path Length: 35.0
-  Min/Max Runtime: 0.513/2.145 ms
+  Min/Max Runtime: 0.528/2.915 ms
 
 Algorithm: A* (euclidean)
 --------------------------------------------------------------------------------
   Total Runs: 4
   Success Rate: 100.0% (4/4)
   Average Nodes Expanded: 225.0
-  Average Runtime: 2.494 ms
+  Average Runtime: 2.779 ms
   Average Path Length: 35.0
-  Min/Max Runtime: 1.328/3.914 ms
+  Min/Max Runtime: 0.884/4.664 ms
 
 Algorithm: A* (manhattan)
 --------------------------------------------------------------------------------
   Total Runs: 4
   Success Rate: 100.0% (4/4)
   Average Nodes Expanded: 218.0
-  Average Runtime: 1.477 ms
+  Average Runtime: 2.176 ms
   Average Path Length: 35.0
-  Min/Max Runtime: 0.548/2.546 ms
+  Min/Max Runtime: 0.561/3.853 ms
 
 Algorithm: BFS
 --------------------------------------------------------------------------------
   Total Runs: 4
   Success Rate: 100.0% (4/4)
   Average Nodes Expanded: 234.5
-  Average Runtime: 1.116 ms
+  Average Runtime: 1.313 ms
   Average Path Length: 35.0
-  Min/Max Runtime: 0.636/1.556 ms
+  Min/Max Runtime: 0.459/1.670 ms
 
 Algorithm: Dijkstra
 --------------------------------------------------------------------------------
   Total Runs: 4
   Success Rate: 100.0% (4/4)
   Average Nodes Expanded: 234.5
-  Average Runtime: 1.438 ms
+  Average Runtime: 1.568 ms
   Average Path Length: 35.0
-  Min/Max Runtime: 0.616/2.405 ms
+  Min/Max Runtime: 0.453/3.083 ms
 
 ================================================================================
 
@@ -299,26 +299,26 @@ DETAILED ALGORITHM COMPARISON
 
 Algorithm                 Grid                 Found    Path Len     Nodes        Time (ms)   
 -----------------------------------------------------------------------------------------
-A* (manhattan)            10x10                Yes      19           84           0.548       
-A* (euclidean)            10x10                Yes      19           84           1.328       
-A* (chebyshev)            10x10                Yes      19           84           0.513       
-Dijkstra                  10x10                Yes      19           84           0.616       
-BFS                       10x10                Yes      19           84           0.802       
-A* (manhattan)            20x20                Yes      39           325          2.546       
-A* (euclidean)            20x20                Yes      39           339          3.914       
-A* (chebyshev)            20x20                Yes      39           341          2.145       
-Dijkstra                  20x20                Yes      39           361          1.959       
-BFS                       20x20                Yes      39           361          1.556       
-A* (manhattan)            25x25                Yes      49           325          1.987       
-A* (euclidean)            25x25                Yes      49           336          3.342       
-A* (chebyshev)            25x25                Yes      49           338          2.091       
-Dijkstra                  25x25                Yes      49           342          2.405       
-BFS                       25x25                Yes      49           342          1.471       
-A* (manhattan)            15x15                Yes      33           138          0.828       
-A* (euclidean)            15x15                Yes      33           141          1.392       
-A* (chebyshev)            15x15                Yes      33           141          0.839       
-Dijkstra                  15x15                Yes      33           151          0.773       
-BFS                       15x15                Yes      33           151          0.636       
+A* (manhattan)            10x10                Yes      19           84           0.561       
+A* (euclidean)            10x10                Yes      19           84           0.884       
+A* (chebyshev)            10x10                Yes      19           84           0.528       
+Dijkstra                  10x10                Yes      19           84           0.453       
+BFS                       10x10                Yes      19           84           0.459       
+A* (manhattan)            20x20                Yes      39           325          3.447       
+A* (euclidean)            20x20                Yes      39           339          4.664       
+A* (chebyshev)            20x20                Yes      39           341          2.915       
+Dijkstra                  20x20                Yes      39           361          3.083       
+BFS                       20x20                Yes      39           361          1.607       
+A* (manhattan)            25x25                Yes      49           325          3.853       
+A* (euclidean)            25x25                Yes      49           336          4.172       
+A* (chebyshev)            25x25                Yes      49           338          2.113       
+Dijkstra                  25x25                Yes      49           342          1.853       
+BFS                       25x25                Yes      49           342          1.514       
+A* (manhattan)            15x15                Yes      33           138          0.845       
+A* (euclidean)            15x15                Yes      33           141          1.394       
+A* (chebyshev)            15x15                Yes      33           141          0.859       
+Dijkstra                  15x15                Yes      33           151          0.882       
+BFS                       15x15                Yes      33           151          1.670       
 
 ================================================================================
 FINAL STATISTICS
@@ -328,9 +328,9 @@ Total tests run: 20
 Successful paths: 20/20
 Success Rate: 100%
 Average nodes expanded: 227.6
-Average runtime: 1.585 ms
-Min runtime: 0.513 ms
-Max runtime: 3.914 ms
+Average runtime: 1.888 ms
+Min runtime: 0.453 ms
+Max runtime: 4.664 ms
 
 ================================================================================
 TASK 3 COMPLETION STATUS: SUCCESS

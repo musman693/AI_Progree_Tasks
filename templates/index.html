@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progree Tasks Dashboard</title>
+  <style>
+    /* removed duplicate hero fragment */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fbff 0%, #eef3ff 100%);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+    }
+    .shell { height: 100vh; display: flex; flex-direction: column; padding: 20px 24px 24px; overflow: hidden; }
+    .hero {
+      background: linear-gradient(120deg, rgba(108,99,255,0.95), rgba(79,209,197,0.9));
+      color: white; border-radius: 20px; padding: 18px 20px; box-shadow: 0 10px 26px rgba(76, 85, 165, 0.18);
+      flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .hero-left { min-width: 0; }
+    .hero-left h1 { margin: 0 0 6px; font-size: 24px; }
+    .hero-left p { margin: 0; opacity: 0.94; font-size: 14px; }
+    .hero-right { display: flex; align-items: center; gap: 12px; white-space: nowrap; max-width: 48%; overflow: hidden; justify-content: flex-end; }
+    .student-name { font-weight: 800; font-size: 22px; line-height: 1; overflow: hidden; text-overflow: ellipsis; }
+    .student-id { font-weight: 700; font-size: 17px; background: rgba(255,255,255,0.08); padding: 6px 10px; border-radius: 8px; opacity: 0.95; }
+    .grid { display: grid; grid-template-columns: 280px 1fr; gap: 18px; margin-top: 14px; flex: 1; overflow: hidden; }
+    .panel { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05); display: flex; flex-direction: column; overflow: hidden; }
+    .task-list { display: grid; gap: 12px; overflow-y: auto; padding-right: 6px; }
+    .task-card { border: 1px solid var(--border); border-radius: 16px; padding: 16px; background: #fcfdff; }
+    .task-card h3 { margin: 0 0 6px; font-size: 17px; }
+    .task-card p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .actions { display: flex; flex-direction: column; gap: 8px; }
+    button { border: 0; border-radius: 999px; padding: 10px 14px; font-weight: 600; cursor: pointer; }
+    .task-card .actions button { width: 100%; }
+    .primary { background: var(--accent); color: white; }
+    .secondary { background: #eef2ff; color: #4c52a5; }
+    .status { margin-top: 16px; padding: 10px 12px; border-radius: 12px; background: #f6f8ff; color: #44506d; }
+    pre { white-space: pre-wrap; word-break: break-word; background: #0f172a; color: #e2e8f0; padding: 14px; border-radius: 12px; min-height: 560px; flex: 1; overflow: auto; }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="hero">
+      <div class="hero-left">
+        <h1>Progree Tasks Dashboard</h1>
+        <p>Run every assignment from one clean local-host interface with a pleasant, light design.</p>
+      </div>
+      <div class="hero-right">
+        <div class="student-name">Muhammad Usman</div>
+        <div class="student-id">ID: B1/1115</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <h2>Available Tasks</h2>
+        <div class="task-list">
+          <div class="task-card">
+            <h3>Task 2 — Sentiment Classifier</h3>
+            <p>Train and run the NLP sentiment analysis pipeline.</p>
+            <div class="actions">
+              <button class="primary" onclick="runTask('task2')">Run Task 2</button>
+              <button class="secondary" onclick="viewResult('task2')">View Result</button>
+            </div>
+          </div>
+          <div class="task-card">
+            <h3>Task 3 — Pathfinding Engine</h3>
+            <p>Execute the pathfinding tests and inspect the output report.</p>
+            <div class="actions">
+              <button class="primary" onclick="runTask('task3')">Run Task 3</button>
+              <button class="secondary" onclick="viewResult('task3')">View Result</button>
+            </div>
+          </div>
+          <div class="task-card">
+            <h3>Task 4 — Computer Vision Pipeline</h3>
+            <p>Run the contour detection and object tracking flow.</p>
+            <div class="actions">
+              <button class="primary" onclick="runTask('task4')">Run Task 4</button>
+              <button class="secondary" onclick="viewResult('task4')">View Result</button>
+            </div>
+          </div>
+        </div>
+        <div id="status" class="status">Select a task to begin.</div>
+      </div>
+
+      <div class="panel">
+        <h2>Output Console</h2>
+        <p class="muted">Results and task output appear here.</p>
+        <pre id="output">No output yet.</pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function runTask(taskId) {
+      const status = document.getElementById('status');
+      const output = document.getElementById('output');
+      status.textContent = 'Running ' + taskId + '...';
+      output.textContent = 'Starting task...';
+      try {
+        const response = await fetch('/api/tasks/' + taskId, { method: 'POST' });
+        const data = await response.json();
+        status.textContent = data.message || 'Task started';
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        status.textContent = 'Task failed to start';
+        output.textContent = err.message;
+      }
+    }
+
+    async function viewResult(taskId) {
+      const output = document.getElementById('output');
+      try {
+        const response = await fetch('/api/results/' + taskId);
+        const data = await response.json();
+        if (data.success) {
+          output.textContent = data.content || 'No content returned.';
+        } else {
+          output.textContent = data.message || 'No result available.';
+        }
+      } catch (err) {
+        output.textContent = err.message;
+      }
+    }
+  </script>
+</body>
+</html>
